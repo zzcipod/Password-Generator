@@ -12,19 +12,21 @@ var numeWords;
 var lowerWords;
 var upperWords;
 var possibleChars = [];
+var optionArray = [];
 
 
 
 function pinlength () {
- pinNumbers = parseInt(alert("The characters limits is between 8 and 128"));
+ pinNumbers = parseInt(alert("How many chracters would you want to input? The characters limits is between 8 and 128"));
 
  if(pinNumbers<8 || pinNumbers>128){
    alert("The characters limits is between 8 and 128 ")
    pinlength ();
    return null;
  }
- else {
+ else if (pinNumbers >= 8 && pinNumbers <= 128){
    console.log(pinNumbers);
+   pinNotice();
    return pinNumbers;
  }
 }
@@ -40,6 +42,7 @@ function pinlength () {
  console.log(numeWords);
  console.log(lowerWords);
  console.log(upperWordsl);
+ ConTogether();
 
  if (!specialWords && !numeWords && !lowerWords && !upperWords) {
    alert("You have to input at leaset one character!");
@@ -49,6 +52,7 @@ function pinlength () {
 }
 
 function ConTogether() {
+  possibleChars=[]; 
 if (specialWords) {
 possibleChars = possibleChars.concat(specialCase);
 }
@@ -68,7 +72,9 @@ if (upperWordsl) {
       }
       
 console.log(possibleChars)
-return
+var password = arrayLoop();
+var passwordText = document.querySelector("#password");
+passwordText.value =password;
     }
 
 function arrayLoop(pinNumbers) {
