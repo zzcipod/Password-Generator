@@ -67,7 +67,7 @@ if (lowerWords) {
     }
 
     
-if (upperWordsl) {
+if (upperWords) {
       possibleChars = possibleChars.concat(upperCase);
       }
       
