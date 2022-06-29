@@ -15,7 +15,7 @@ var possibleChars = [];
 var optionArray = [];
 
 
-
+// Let user choose how many characters put in
 function pinlength () {
  pinNumbers = parseInt(prompt("How many chracters would you want to input? The characters limits is between 8 and 128"));
 
@@ -31,6 +31,7 @@ function pinlength () {
  }
 }
  
+// Let users choose if any special words
  function pinNotice(){
    specialWords = confirm("Any special characters?");
    numeWords = confirm("Any numbers?");
